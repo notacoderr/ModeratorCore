@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Main;
+namespace Core;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
@@ -14,7 +14,7 @@ use pocketmine\entity\EffectInstance;
 use pocketmine\event\Listener;
 use pocketmine\math\Vector3;
 
-class Main extends PluginBase{
+class Main extends PluginBase implements Listener{
 
     public function onEnable(){
         $this->getLogger()->info("§aThank you for installing this plugin by Steellgold");
