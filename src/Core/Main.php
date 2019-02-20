@@ -98,6 +98,39 @@ class Main extends PluginBase implements Listener{
             }
             return true;
         break;
+		       
+		       
+		       
+        case "heal":
+            $player->sendMessage("§f[§3PlayerCore§f]§r Tu a été soigner");
+            $player->setHealth(20);
+            return true;
+        break;
+
+
+        case 'feed':
+            $player->sendMessage("§f[§3PlayerCore§f]§r Tu a été nourri(e)");
+            $player->setFood(20);
+            return true;
+        break; 
+		       
+        case "boussole":
+                $x = $player->getFloorX();
+                $y = $player->y;
+                $z = $player->getFloorZ();
+
+                $player->addTitle("§f[§3PlayerCore§f]§r", "X : $x | Y : $y | Z: $z");
+            return true;
+        break;
+		       
+        case "announce":
+                $message = implode(" ", $args);
+
+                foreach (Server::getInstance()->getOnlinePlayers() as $news) {
+                    $news->addTitle("§f[§3Announcements§f]§r", "$message");
+                }
+            return true;
+        break;
 
 
         }
@@ -106,7 +139,7 @@ class Main extends PluginBase implements Listener{
 
 
     public function onDisable(){
-        $this->getLogger()->info("§cThe plugin is not load");
+        $this->getLogger()->info("§cThe plugin is unload");
     }
 
 
