@@ -14,7 +14,7 @@ use pocketmine\entity\EffectInstance;
 use pocketmine\event\Listener;
 use pocketmine\math\Vector3;
 
-class Main extends PluginBase implements Listener{
+class Main extends PluginBase{
 
     public function onEnable(){
         $this->getLogger()->info("§aThank you for installing this plugin by Steellgold");
