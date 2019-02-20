@@ -1,0 +1,56 @@
+name: ModeratorCore
+version: 1.0
+api: 3.0.0
+main: Core\Main
+
+commands:
+  tpall:
+    description: "§f[§3ModeratorCore§f]§r > Téléporter tout le serveur à vous"
+    usage: "/tpall [string:message]"
+    permission: "modore.tpall"
+
+  gm1:
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Créatif"
+    usage: "/gm1"
+    permission: "modore.gm1"
+
+
+  gm2:
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Aventure"
+    usage: "/gm2"
+    permission: "modore.gm2"
+
+  gm3:
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Spectateur"
+    usage: "/gm3"
+    permission: "modore.gm3"
+
+  gm0:
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Survie"
+    usage: "/gm0"
+    permission: "modore.gm0"
+
+  vanish:
+    description: "§f[§3ModeratorCore§f]§r > Activer le mode Vanish"
+    usage: "/vanish"
+    permission: "modore.vanish"
+
+  kickall:
+    description: "§f[§3ModeratorCore§f]§r > Expulser tout les joueurs"
+    usage: "/kickall [string:message]"
+    permission: "modore.kickall"
+
+  fly:
+    description: "§f[§3ModeratorCore§f]§r > Se téléporter à la salle de crafts"
+    usage: "/fly"
+    permission: "modore.fly"
+
+permissions:
+ modore.gm1:
+  default: op
+ modore.gm2:
+  default: op
+ modore.gm3:
+  default: op
+ modore.gm0:
+  default: op
