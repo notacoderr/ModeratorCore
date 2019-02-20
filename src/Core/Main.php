@@ -43,8 +43,8 @@ class Main extends PluginBase implements Listener{
         case 'gm2':
             $player->addTitle("§6Gamemode Update", "§fAdventure");
             $player->setGamemode(2);
-            $player->setHealth(1);
-            $player->setFood(1);
+            $player->setHealth(20);
+            $player->setFood(20);
             return true;
         break; // gamemode 2
 
