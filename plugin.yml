@@ -1,7 +1,7 @@
 name: ModeratorCore
 version: 1.0
 api: 3.0.0
-main: Core
+main: Core\Main
 
 commands:
   tpall:
