@@ -44,6 +44,27 @@ commands:
     description: "§f[§3ModeratorCore§f]§r > Se téléporter à la salle de crafts"
     usage: "/fly"
     permission: "modore.fly"
+    
+  announce:
+    description: "§f[§3ModeratorCore§f]§r > Make an announcement"
+    usage: "/annonce [string:message]"
+    permission: "modcore.annonce"
+# PLAYER COMMANDS
+
+  feed:
+    description: "§f[§3PlayerCore§f]§r > Eating is Important!"
+    usage: "/feed"
+    permission: "modcore.feed"
+    
+  heal:
+    description: "§f[§3PlayerCore§f]§r > We must heal!"
+    usage: "/heal"
+    permission: "modcore.heal"
+    
+  xyz:
+    description: "§f[§3PlayerCore§f]§r > Know your coordinates"
+    usage: "/xyz"
+
 
 permissions:
  modore.gm1:
@@ -53,4 +74,8 @@ permissions:
  modore.gm3:
   default: op
  modore.gm0:
+  default: op
+ modcore.heal:
+  default: op
+ modcore.feed:
   default: op
