@@ -1,124 +1,56 @@
-name: HesuviaCore
-main: Core\Hesuvia\Main
-version: 1.0-Dev
+name: ModeratorCore
+version: 1.0
 api: 3.0.0
-author: hesuvia
+main: Core\Main
 
 commands:
-  feed:
-    description: "§f[§3Hesuvia§f]§r > Manger c'est Important !"
-    usage: "/feed"
-    permission: "hesuvia.feed"
-    
-  heal:
-    description: "§f[§3Hesuvia§f]§r > Il faut se soigner !"
-    usage: "/heal"
-    permission: "hesuvia.heal"
-
-  clear:
-    description: "§f[§3Hesuvia§f]§r > Se mettre nu(e)"
-    usage: "/clearinv"
-    permission: "hesuvia.clearinv"
-
   tpall:
-    description: "§f[§3Hesuvia§f]§r > Téléporter tout le serveur à vous"
-    usage: "/feed"
-    permission: "hesuvia.tpall"
+    description: "§f[§3ModeratorCore§f]§r > Téléporter tout le serveur à vous"
+    usage: "/tpall [string:message]"
+    permission: "modore.tpall"
 
   gm1:
-    description: "§f[§3Hesuvia§f]§r > Gamemode Créatif"
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Créatif"
     usage: "/gm1"
-    permission: "hesuvia.gm1"
+    permission: "modore.gm1"
 
 
   gm2:
-    description: "§f[§3Hesuvia§f]§r > Gamemode Aventure"
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Aventure"
     usage: "/gm2"
-    permission: "hesuvia.gm2"
+    permission: "modore.gm2"
 
   gm3:
-    description: "§f[§3Hesuvia§f]§r > Gamemode Spectateur"
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Spectateur"
     usage: "/gm3"
-    permission: "hesuvia.gm3"
+    permission: "modore.gm3"
 
   gm0:
-    description: "§f[§3Hesuvia§f]§r > Gamemode Survie"
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Survie"
     usage: "/gm0"
-    permission: "hesuvia.gm0"
+    permission: "modore.gm0"
 
   vanish:
-    description: "§f[§3Hesuvia§f]§r > Activer le mode Vanish"
-    usage: "/vanish-on"
-    permission: "hesuvia.vanish"
-
-  spawn:
-    description: "§f[§3Hesuvia§f]§r > Ce téléporter au spawn"
-    usage: "/sspawn"
-
-  starterkit:
-    description: "§f[§3Hesuvia§f]§r > Avoir le kit de départ"
-    usage: "/starterkit"
-
-  hesuviatower:
-    description: "§f[§3Hesuvia§f]§r > Se téléporter à l'Hesuvia Tower §3[§fSuperModérateur§3]"
-    usage: "/hesuviatower"
-    permission: "hesuvia.hesuviatower"
+    description: "§f[§3ModeratorCore§f]§r > Activer le mode Vanish"
+    usage: "/vanish"
+    permission: "modore.vanish"
 
   kickall:
-    description: "§f[§3Hesuvia§f]§r > Expulser tout les joueurs"
-    usage: "/kickall"
-    permission: "hesuvia.kickall"
-
-  annonce:
-    description: "§f[§3Hesuvia§f]§r > Faire une annonce"
-    usage: "/hesuviatower"
-    permission: "hesuvia.annonce"
-  
-  boussole:
-    description: "§f[§3Hesuvia§f]§r > Savoir vos coordonnées"
-    usage: "/boussole"
-
-  nether:
-    description: "§f[§cHesuvia§f]§r > §cSe téléporter au nether"
-    usage: "/nether"
-
-  crafts:
-    description: "§f[§3Hesuvia§f]§r > Se téléporter à la salle de crafts"
-    usage: "/crafts"
+    description: "§f[§3ModeratorCore§f]§r > Expulser tout les joueurs"
+    usage: "/kickall [string:message]"
+    permission: "modore.kickall"
 
   fly:
-    description: "§f[§3Hesuvia§f]§r > Se téléporter à la salle de crafts"
+    description: "§f[§3ModeratorCore§f]§r > Se téléporter à la salle de crafts"
     usage: "/fly"
-    permission: "hesuvia.fly"
-
-  serveurfaction:
-    description: "§f[§3Hesuvia§f]§r > Serveur Faction"
-    usage: "/faction"
-    permission: "hesuvia.transfer.faction"
-
-  testserver:
-    description: "§f[§3Hesuvia§f]§r > Serveur de Test"
-    usage: "/testserver"
-    permission: "hesuvia.transfer.serveur.test"
+    permission: "modore.fly"
 
 permissions:
- hesuvia.heal:
+ modore.gm1:
   default: op
- hesuvia.feed:
+ modore.gm2:
   default: op
- hesuvia.clearinv:
+ modore.gm3:
   default: op
- hesuvia.gm1:
+ modore.gm0:
   default: op
- hesuvia.gm2:
-  default: op
- hesuvia.gm3:
-  default: op
- hesuvia.gm0:
-  default: op
- hesuvia.hesuviatower:
-  default: op
- hesuvia.annonce:
-  default: op
- hesuvia.fly:
-   default: op
