@@ -13,4 +13,4 @@ its goooood !
 ```
 
 ## Contributing
-Thanks to Vivolta and Matrox who helped me during the creation of this plugin
+Thanks to VirVolta and Matrox who helped me during the creation of this plugin
