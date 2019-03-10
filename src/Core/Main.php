@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener{
 
 
         case 'gm0':
-            $player->addTitle("§6Gamemode Update", "§fSurvival");
+            $player->addTitle("§7Gamemode Update", "§3Survival");
             $player->setGamemode(0);
             $player->setHealth(20);
             $player->setFood(20);
@@ -34,14 +34,14 @@ class Main extends PluginBase implements Listener{
 
 
         case 'gm1':
-            $player->addTitle("§6Gamemode Update", "§fCreative");
+            $player->addTitle("§7Gamemode Update", "§3Creative");
             $player->setGamemode(1);
             return true;
         break; // gamemode 1
 
 
         case 'gm2':
-            $player->addTitle("§6Gamemode Update", "§fAdventure");
+            $player->addTitle("§7Gamemode Update", "§3Adventure");
             $player->setGamemode(2);
             $player->setHealth(20);
             $player->setFood(20);
@@ -50,7 +50,7 @@ class Main extends PluginBase implements Listener{
 
 
         case 'gm3':
-            $player->addTitle("§6Gamemode Update", "§fSpectator");
+            $player->addTitle("§7Gamemode Update", "§3Spectator");
             $player->setGamemode(3);
             return true;
         break; // gamemode 3
@@ -59,7 +59,7 @@ class Main extends PluginBase implements Listener{
 	    $message = implode(" ", $args);
 			foreach (Server::getInstance()->getOnlinePlayers() as $pl) {
 			$pl->teleport($player);
-			$pl->addTitle("§f[§3Moderator Tools TP§f]§r", "$message");
+			$pl->addTitle("§f[§3§Metro§7PvP§f]§r", "$message");
 	    	}
 		return true;
 	break;
@@ -68,23 +68,10 @@ class Main extends PluginBase implements Listener{
         case 'vanish':
                 if ($player->isInvisible()) {
                     $player->setInvisible(false);
-                    $player->addTitle("§f[§3Moderator Tools§f]§r","§fYou are visible");
+                    $player->addTitle("§f[§3§Metro§7PvP§f]§r","§fYou are visible");
                 }else{
                     $player->setInvisible(true);
-                    $player->addTitle("§f[§3Moderator Tools§f]§r","§fYou are invisible");
-                }
-            return true;
-        break;
-
-
-        case 'fly':
-
-                if ($player->getAllowFlight()) {
-                    $player->setAllowFlight(false);
-                    $player->addTitle("§f[§3Moderator Tools§f]§r","§fYou can not fly anymore");
-                }else{
-                    $player->setAllowFlight(true);
-                    $player->addTitle("§f[§3Moderator Tools§f]§r","§fYou can fly");
+                    $player->addTitle("§f[§3§Metro§7PvP§f]§r","§fYou are invisible");
                 }
             return true;
         break;
@@ -101,14 +88,14 @@ class Main extends PluginBase implements Listener{
 		       
 		       
         case "heal":
-            $player->sendMessage("§f[§3PlayerCore§f]§r You were healed");
+            $player->sendMessage("§f[§3§Metro§7PvP§f]§r You were healed");
             $player->setHealth(20);
             return true;
         break;
 
 
         case 'feed':
-            $player->sendMessage("§f[§3PlayerCore§f]§r You have been feeded");
+            $player->sendMessage("§f[§3§Metro§7PvP§f]§r You have been feeded");
             $player->setFood(20);
             return true;
         break; 
@@ -118,7 +105,7 @@ class Main extends PluginBase implements Listener{
                 $y = $player->y;
                 $z = $player->getFloorZ();
 
-                $player->addTitle("§f[§3PlayerCore§f]§r", "X : $x | Y : $y | Z: $z");
+                $player->addTitle("§f[§3§Metro§7PvP§f]§r", "X : $x | Y : $y | Z: $z");
             return true;
         break;
 		       
@@ -126,7 +113,7 @@ class Main extends PluginBase implements Listener{
                 $message = implode(" ", $args);
 
                 foreach (Server::getInstance()->getOnlinePlayers() as $news) {
-                    $news->addTitle("§f[§3Announcements§f]§r", "$message");
+                    $news->addTitle("§f[§cALERT§f]§r", "$message");
                 }
             return true;
         break;
@@ -138,7 +125,7 @@ class Main extends PluginBase implements Listener{
 
 
     public function onDisable(){
-        $this->getLogger()->info("§cThe plugin is unload");
+        $this->getLogger()->info("§cThe plugin is unloaded");
     }
 
 
