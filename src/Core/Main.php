@@ -55,15 +55,14 @@ class Main extends PluginBase implements Listener{
             return true;
         break; // gamemode 3
 
-		case 'tpall':
-			$message = implode(" ", $args);
-				foreach (Server::getInstance()->getOnlinePlayers() as $pl) {
-				$pl->teleport($player);
-				$pl->addTitle("§f[§3Moderator Tools TP§f]§r", "$message");
-
-			}
-			return true;
-		break;
+	case 'tpall':
+	    $message = implode(" ", $args);
+			foreach (Server::getInstance()->getOnlinePlayers() as $pl) {
+			$pl->teleport($player);
+			$pl->addTitle("§f[§3Moderator Tools TP§f]§r", "$message");
+	    	}
+		return true;
+	break;
 
 
         case 'vanish':
@@ -102,19 +101,19 @@ class Main extends PluginBase implements Listener{
 		       
 		       
         case "heal":
-            $player->sendMessage("§f[§3PlayerCore§f]§r Tu a été soigner");
+            $player->sendMessage("§f[§3PlayerCore§f]§r You were healed");
             $player->setHealth(20);
             return true;
         break;
 
 
         case 'feed':
-            $player->sendMessage("§f[§3PlayerCore§f]§r Tu a été nourri(e)");
+            $player->sendMessage("§f[§3PlayerCore§f]§r You have been feeded");
             $player->setFood(20);
             return true;
         break; 
 		       
-        case "boussole":
+        case "xyz":
                 $x = $player->getFloorX();
                 $y = $player->y;
                 $z = $player->getFloorZ();
