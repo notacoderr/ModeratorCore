@@ -40,11 +40,6 @@ commands:
     usage: "/kickall [string:message]"
     permission: "modore.kickall"
 
-  fly:
-    description: "§f[§3ModeratorCore§f]§r > Know our coordinates"
-    usage: "/fly"
-    permission: "modore.fly"
-    
   announce:
     description: "§f[§3ModeratorCore§f]§r > Make an announcement"
     usage: "/annonce [string:message]"
