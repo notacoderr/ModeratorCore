@@ -1,7 +1,0 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/SteellgoldEstFrancais/ModeratorCore
-branches:
-- master
-projects:
-  ModeratorCore:
-    path: ""
-...
