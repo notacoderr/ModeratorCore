@@ -1,47 +1,47 @@
 name: ModeratorCore
-version: 1.0
+version: 1.5
 api: 3.0.0
 main: Core\Main
 
 commands:
   tpall:
-    description: "§f[§3ModeratorCore§f]§r > Téléporter tout le serveur à vous"
+    description: "§f[§3ModeratorCore§f]§r > Teleport the entire server to you"
     usage: "/tpall [string:message]"
     permission: "modore.tpall"
 
   gm1:
-    description: "§f[§3ModeratorCore§f]§r > Gamemode Créatif"
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Creative"
     usage: "/gm1"
     permission: "modore.gm1"
 
 
   gm2:
-    description: "§f[§3ModeratorCore§f]§r > Gamemode Aventure"
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Adventure"
     usage: "/gm2"
     permission: "modore.gm2"
 
   gm3:
-    description: "§f[§3ModeratorCore§f]§r > Gamemode Spectateur"
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Spectator"
     usage: "/gm3"
     permission: "modore.gm3"
 
   gm0:
-    description: "§f[§3ModeratorCore§f]§r > Gamemode Survie"
+    description: "§f[§3ModeratorCore§f]§r > Gamemode Survival"
     usage: "/gm0"
     permission: "modore.gm0"
 
   vanish:
-    description: "§f[§3ModeratorCore§f]§r > Activer le mode Vanish"
+    description: "§f[§3ModeratorCore§f]§r > Enable vanish to be invisible"
     usage: "/vanish"
     permission: "modore.vanish"
 
   kickall:
-    description: "§f[§3ModeratorCore§f]§r > Expulser tout les joueurs"
+    description: "§f[§3ModeratorCore§f]§r > Kick all players this server"
     usage: "/kickall [string:message]"
     permission: "modore.kickall"
 
   fly:
-    description: "§f[§3ModeratorCore§f]§r > Se téléporter à la salle de crafts"
+    description: "§f[§3ModeratorCore§f]§r > Know our coordinates"
     usage: "/fly"
     permission: "modore.fly"
     
