@@ -57,7 +57,7 @@ class Main extends PluginBase implements Listener{
 
 	case 'tpall':
 	    $message = implode(" ", $args);
-			foreach (Server::getInstance()->getOnlinePlayers() as $pl) {
+		foreach ($this->getServer()->getOnlinePlayers() as $pl) {
 			$pl->teleport($player);
 			$pl->addTitle("§f[§3§Metro§7PvP§f]§r", "$message");
 	    	}
@@ -79,7 +79,7 @@ class Main extends PluginBase implements Listener{
 
         case 'kickall':
                 $message = implode(" ", $args);
-                foreach (Server::getInstance()->getOnlinePlayers() as $pl) {
+           foreach ($this->getServer()->getOnlinePlayers() as $pl) {
                 $pl->kick("You have been kicked form this server for $message");
             }
             return true;
@@ -90,14 +90,12 @@ class Main extends PluginBase implements Listener{
         case "heal":
             $player->sendMessage("§f[§3§Metro§7PvP§f]§r You were healed");
             $player->setHealth(20);
-            return true;
         break;
 
 
         case 'feed':
             $player->sendMessage("§f[§3§Metro§7PvP§f]§r You have been feeded");
             $player->setFood(20);
-            return true;
         break; 
 		       
         case "xyz":
@@ -106,16 +104,11 @@ class Main extends PluginBase implements Listener{
                 $z = $player->getFloorZ();
 
                 $player->addTitle("§f[§3§Metro§7PvP§f]§r", "X : $x | Y : $y | Z: $z");
-            return true;
         break;
 		       
         case "announce":
                 $message = implode(" ", $args);
-
-                foreach (Server::getInstance()->getOnlinePlayers() as $news) {
-                    $news->addTitle("§f[§cALERT§f]§r", "$message");
-                }
-            return true;
+                $this->getServer()->broadcastTitle("§f[§cALERT§f]§r", "$message", $this->getServer()->getOnlinePlayers());
         break;
 
 
